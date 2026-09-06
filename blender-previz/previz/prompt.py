@@ -19,6 +19,12 @@ _MOVE_WORDS = {
 }
 
 
+def _sentence(text: str) -> str:
+    """Leading capital, so the assembled prompt reads as prose rather than a
+    concatenation of JSON fields."""
+    return text[:1].upper() + text[1:] if text else text
+
+
 def build_prompt(spec: ShotSpec) -> str:
     p = spec.prompt
     cam = spec.camera
@@ -42,7 +48,7 @@ def build_prompt(spec: ShotSpec) -> str:
         tech.append(p["grade"].strip().rstrip("."))
     parts.append(", ".join(tech))
 
-    prompt = ". ".join(x for x in parts if x) + "."
+    prompt = ". ".join(_sentence(x) for x in parts if x) + "."
     if p.get("negative"):
         prompt += f"\n\nAvoid: {p['negative'].strip()}"
     return prompt
