@@ -15,6 +15,15 @@ result **worse** — it gives the model contradictory surface cues to fight.
 
 Toolkit lives in `blender-previz/` (see its README for the full pipeline).
 
+## Where this sits in the chain
+
+`creative-director` (the idea) -> `cinematic-director` (shot list, blocking,
+lens and light) -> **this skill** (camera and timing locked in 3D) ->
+`video` (the model-native prompt). See `.claude/skills/README.md`. Take the
+shot list from `cinematic-director` as the input to the spec, and hand the
+`clay` pass to `video` as the structural reference. Do not re-decide framing
+here that the shot list already settled.
+
 ## Setup
 
 ```bash
