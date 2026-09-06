@@ -1,0 +1,4 @@
+# Blender as a Python module - ships the whole renderer, no GUI needed.
+bpy==5.0.1
+# Static ffmpeg binary, used to encode the pass sequences into mp4.
+imageio-ffmpeg>=0.6.0
