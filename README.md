@@ -1,3 +1,5 @@
+> **SKLUBS Box Configurator** — ce dépôt héberge aussi le configurateur de boîtes paramétrique SKLUBS (`box-configurator/`, documentation dans `docs/box-configurator/`). Le reste de ce README concerne la liste d'APIs d'origine du fork.
+
 <div align="center">
 
 # 🎥 Video Scraping APIs
